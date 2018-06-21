@@ -20,11 +20,10 @@ Complexity:
 expected worst-case time complexity is O(log(N));
 expected worst-case space complexity is O(1).
 
-
+```
 class Solution {
     public int solution(int N) {
         String binary = Integer.toBinaryString(N);
-		
         int gap = 0;
         String[] binarys = binary.split("1");
         for (String zeros : binarys) {
@@ -36,3 +35,4 @@ class Solution {
         return gap;
     }
 }
+```

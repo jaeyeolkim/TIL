@@ -85,9 +85,11 @@ import java.util.stream.Collectors;
 
 class Solution {
     public int[] solution(int[] A, int K) {
+        //empty test error
         if(A.length == 0 || K == 0){
             return A;
         }
+        
         int mod = K % A.length;
         //int array to list
         List<Integer> list = Arrays.stream(A).boxed().collect(Collectors.toList());

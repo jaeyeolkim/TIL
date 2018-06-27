@@ -136,3 +136,32 @@ Assume that:
 N is an odd integer within the range [1..1,000,000];
 each element of array A is an integer within the range [1..1,000,000,000];
 all but one of the values in A occur an even number of times.
+
+```
+import java.util.Map;
+import java.util.HashMap;
+
+class Solution {
+    public int solution(int[] A) {
+        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+        int unpaired = 0;
+        
+        for(int i=0; i < A.length; i++){
+            int count = 1;
+            if(map.get(A[i]) != null && map.get(A[i]) != 2){
+                count = 2;
+            }
+            map.put(A[i], count);
+        }
+        
+        for(int key : map.keySet()){
+            if(map.get(key) == 1){
+                unpaired = key;
+                break;
+            }
+        }
+        
+        return unpaired;
+    }
+}
+```

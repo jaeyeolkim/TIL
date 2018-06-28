@@ -196,3 +196,17 @@ Assume that:
 X, Y and D are integers within the range [1..1,000,000,000];
 X ≤ Y.
 
+```
+class Solution {
+    public int solution(int X, int Y, int D) {
+        int distance = Y-X;
+        int mod = distance % D;
+        if(mod == 0){
+            return distance / D;
+        }else{
+            return (distance / D) + 1;
+        }
+    }
+}
+```
+

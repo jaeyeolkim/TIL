@@ -234,3 +234,34 @@ Assume that:
 N is an integer within the range [0..100,000];
 the elements of A are all distinct;
 each element of array A is an integer within the range [1..(N + 1)].
+
+```
+import java.util.Arrays;
+
+class Solution {
+    public int solution(int[] A) {
+        if(A == null || A.length == 0){
+            return 1;
+        }
+        if(A.length == 1 && A[0] == 1){
+            return 2;
+        }
+        
+        Arrays.sort(A);
+        
+        if(A[0] != 1){
+            return 1;
+        }
+        
+        int missing = A[0];
+        for(int i : A){
+            if(i == missing){
+                missing++;
+                continue;
+            }
+            break;
+        }
+        return missing;
+    }
+}
+```

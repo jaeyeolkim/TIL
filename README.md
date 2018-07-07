@@ -312,3 +312,29 @@ Complexity:
 
 expected worst-case time complexity is O(N);
 expected worst-case space complexity is O(N) (not counting the storage required for input arguments).
+
+```
+풀고 있는 중...
+
+class Solution {
+    public int solution(int[] A) {
+        int abs = 0;
+        for(int i=0; i<A.length; i++){
+            int left = 0;
+            int right = 0;
+            
+            for(int j=0; j<=i; j++){
+                left += A[j];
+            }
+            for(int j=i+1; j<A.length; j++){
+                right += A[j];
+            }
+            
+            if(abs < Math.abs(left - right)){
+                abs = Math.abs(left - right);
+            }
+        }
+        return abs;
+    }
+}
+```

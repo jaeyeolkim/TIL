@@ -35,7 +35,9 @@ paramMap.remove("START_DATE");
 <foreach collection="APPROVAL_STATUS" item="item" separator="," close=")" open=" IN (">
     #{APPROVAL_item} => 변환기
 </foreach>
- =>
+```
+변환기는 위와 같이 된다. 아래와 같이 수정해야 원하는 결과를 얻게 된다.
+```
 <foreach collection="APPROVAL_STATUS" item="item" separator="," close=")" open=" IN (">
     '${item}'
 </foreach>

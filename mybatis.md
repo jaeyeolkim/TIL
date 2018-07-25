@@ -29,7 +29,7 @@ paramMap.remove("START_DATE");
 </if>
 ```
 
-* insert 나 update 시 map에 key가 없는 속성인 경우 'null' 과 같이 입력될 수 있으므로 주의해야 한다.
+* insert 나 update 시 map에 key가 없는 속성인 경우 <code>'null'</code> 과 같이 입력될 수 있으므로 주의해야 한다.<br/>
 즉, map 에 key 속성들이 모두 정의되거나 if 문으로 처리해주어야 한다.
 <br/>
 

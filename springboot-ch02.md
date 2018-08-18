@@ -12,17 +12,34 @@
   * 하지만 이 설정은 속성(property)을 이용한 개별적인 의존성을 재정의 할 수 없다.
   * 부모 스프링 부트 스타터 상속에서 프로퍼티만 정의했던 것과 동일한 결과를 얻기 위해서는 dependencyManagement 엔트리 안에서 spring-boot-dependencies 엔트리 이전에 필요한 것을 추가해야 한다.
 * spring-boot-starter-parent 는 java.version 이 1.6 이다. java.version을 추가하여 변경한다.
-```
-<properties>
-  <java.version>1.8</java.version>
-</properties>
-```
+  ```
+  <properties>
+    <java.version>1.8</java.version>
+  </properties>
+  ```
 * 래퍼(Wrapper)
   * Gradle을 각 개발자나 CI 서버에 깔지 않고, 프로젝트에 함께 포함시켜 배포할 수 있는 방법을 제공해준다.
   * 자세한 설명은 http://kwonnam.pe.kr/wiki/gradle/wrapper
+* 코드 구조
+  * 애플리케이션 메인 클래스는 최상위 패키지(kr.co.~)에 위치하는 것을 권장한다.
+  * 최상위 패키지에 있는 클래스에 @ComponentScan를 선언하면 basePackage 속성을 정의할 필요가 없다.
+  * **SpringBootApplication(메인 클래스) 의 위치가 (app 하위등으로)변경되면 scanBasePackages 속성에서 탐색해야 할 패키지를 지정해야 하는 번거로움이 생긴다.**
+  * 메인 클래스 위치를 임의로 변경하고 애플리케이션이 실행되지 않는다고 하는 경우가 제법 많으니 주의하자.(빈을 탐색하지 못해 예외가 발생)
+* 구성(Configuration) 클래스
+  * 스프링 부트는 자바기반 구성(JavaConfig)을 선호한다.
+  * XML 소스를 이용하는 것도 가능하지만 기본적으로는 @Configuration과 자바코드로 선언하는 것을 권장한다.
+  * 모든 것을 @Configuration이 선언된 하나의 클래스에 몰아 넣을 필요는 없다.
+  * @Import 애너테이션을 이용하여 추가적인 구성 클래스를 불어와 사용할 수 있다.
+  ```
+  @Configuration
+  @Import(EnableWebMvcConfiguration.class)
+  ```
+  * 이에 대한 대안으로 @ComponentScan을 사용하면 @Configuration를 포함한 모든 스프링 컴포넌트를 사용할 수 있다.
+  * XML 구성 불러오기는 @ImportResource 의 인자로 XML의 위치를 지정하면 된다.
 
 
 ### 오타
 * p19(노트), 스프링 부트는 프로젝트 빌드도구로 그레이들**와** 메이븐 중에서 사용하길 권한다.(와 -> 과)
 * p27(중간), spring-boot-depen dencies(공백이 들어가 있다)
-* p28(중간), 개발자 로컬환경 CI 서버에 설치하지 않고 -> 개발자 로컬환경이나 CI 서버에 설치하지 않고
+* p28(중간), 개발자 로컬환경 CI 서버에 설치하지 않고 -> 각 개발자 로컬환경이나 CI 서버에 설치하지 않고
+* p31(중간), basePakcage -> basePackage

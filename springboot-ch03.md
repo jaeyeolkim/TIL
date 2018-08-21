@@ -55,7 +55,7 @@
   * 애플리케이션 실행인자 접근
     * SpringApplication.run(...)으로 전달되는 실행인자의 접근은 ApplicationArguments 빈을 이용한다.
     * option과 non-option 인자로 분류하여 접근할 수 있다.
-    ```
+    ```java
     @Slf4j
     @Component
     public class AppArgsAccessor {

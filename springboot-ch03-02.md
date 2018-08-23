@@ -15,7 +15,7 @@
   * YAML은 JSON의 확장판이라고 할 수 있다.
   * 계층적으로 구성된 데이터를 사람이 쉽게 읽을 수 있는 형식으로 표현한다.
   * 클래스패스 상에 SnakeYAML을 가지고 있다면 자동으로 properties를 대신하여 YAML을 지원할 수 있다.
-  * YAML 문서에서 **spring.profiles** 키를 이용해서 다중 프로파일을 다룰 수 있다.
+  * YAML 문서에서 **spring.profiles** 키를 이용해서 다중 프로파일을 다룰 수 있다. '---' 로 구분
   ~~~
   #default
   logging:

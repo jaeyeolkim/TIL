@@ -33,3 +33,8 @@
   server:
     port: 9000
   ~~~
+  * default: 모든 프로파일에 공통적용되는 속성. 프로파일을 별도로 지정하지 않은 경우 적용된다.
+  * properties 사용시에는 application-\*.properties 파일들을 만들어서 설정해야 한다.
+  * YAML의 단점
+    * @PropertySoucr 애너테이션에 적재되지 않는다.
+    * 이 떄는 properties 파일을 사용해야 한다.

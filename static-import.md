@@ -4,17 +4,20 @@
 ```java
 import com.util.StringUtil;
 
-String userCode = StringUtil.null2string(map.get("USER_CODE"));
-String userName = StringUtil.null2string(map.get("USER_NAME"));
+user.setUserCode(StringUtil.null2string(map.get("USER_CODE")));
+user.setUserName(StringUtil.null2string(map.get("USER_NAME")));
+user.setDeptCode(StringUtil.null2string(map.get("DEPT_CODE")));
+user.setDeptName(StringUtil.null2string(map.get("DEPT_NAME")));
 ```
 
 * static import 를 사용하면 코드가 훨씬 깔끔해진다.
 ```java
-import static com.util.StringUtil.null2string;
-//또는 import static com.util.StringUtil.*;
+import static com.util.StringUtil.null2string; //또는 import static com.util.StringUtil.*;
 
-String userCode = null2string(map.get("USER_CODE"));
-String userName = null2string(map.get("USER_NAME"));
+user.setUserCode(null2string(map.get("USER_CODE")));
+user.setUserName(null2string(map.get("USER_NAME")));
+user.setDeptCode(null2string(map.get("DEPT_CODE")));
+user.setDeptName(null2string(map.get("DEPT_NAME")));
 ```
   * <code>StringUtil.</code>을 쓰지 않아도 <code>null2string</code> 사용할 수 있다.
 

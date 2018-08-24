@@ -20,6 +20,7 @@ user.setDeptCode(null2string(map.get("DEPT_CODE")));
 user.setDeptName(null2string(map.get("DEPT_NAME")));
 ```
 
-* import static com.util.StringUtil.<code>*</code>; 사용시에는 메소드의 출처를 알기 어려울 수도 있어서 협업시에는 좋지 않을 듯 하다.  
+* import static com.util.StringUtil.<code>*</code>; 
+  * 상황에 따라 다르겠지만 메소드의 출처를 알기 어려울 수도 있어서 협업시에는 좋지 않을 듯 하다.
 * java 1.5 부터 사용 가능하다.
   * https://docs.oracle.com/javase/1.5.0/docs/guide/language/static-import.html

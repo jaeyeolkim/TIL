@@ -1,6 +1,6 @@
 ### java static import 정리
 
-* static 메소드 사용시 아래와 같이 사용해왔다.
+* static 메소드 사용시 <code>StringUtil.null2string</code> 과 같이 사용해왔다.
 ```java
 import com.util.StringUtil;
 

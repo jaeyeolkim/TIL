@@ -10,7 +10,7 @@ user.setDeptCode(StringUtil.null2string(map.get("DEPT_CODE")));
 user.setDeptName(StringUtil.null2string(map.get("DEPT_NAME")));
 ```
 
-* static import 를 사용하면 코드가 훨씬 깔끔해진다.
+* static import 를 사용하면 <code>StringUtil.</code> 없이도 <code>null2string</code> 사용할 수 있다.
 ```java
 import static com.util.StringUtil.null2string; //또는 import static com.util.StringUtil.*;
 
@@ -19,7 +19,6 @@ user.setUserName(null2string(map.get("USER_NAME")));
 user.setDeptCode(null2string(map.get("DEPT_CODE")));
 user.setDeptName(null2string(map.get("DEPT_NAME")));
 ```
-  * <code>StringUtil.</code>을 쓰지 않아도 <code>null2string</code> 사용할 수 있다.
 
 * import static com.util.StringUtil.<code>*</code>; 사용시에는 메소드의 출처를 알기 어려울 수도 있어서 협업시에는 좋지 않을 듯 하다.  
 * java 1.5 부터 사용 가능하다.

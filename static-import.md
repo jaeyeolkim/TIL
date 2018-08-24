@@ -1,4 +1,4 @@
-### java static import 사용하여 가독성을 높이자
+### java static import 정리
 
 * static 메소드 사용시 아래와 같이 일반적으로 사용한다.
 ```java
@@ -8,7 +8,7 @@ StringUtil.null2string(map.get("USER_CODE"));
 StringUtil.null2string(map.get("USER_NAME"));
 ```
 
-* static import 를 사용하면 코드를 줄이고 가독성을 높일 수 있다.
+* static import 를 사용하면 코드가 훨씬 깔끔해진다.
 ```java
 import static StringUtil.null2string;
 //또는 import static StringUtil.*;

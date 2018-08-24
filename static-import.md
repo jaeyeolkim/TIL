@@ -4,8 +4,8 @@
 ```java
 import com.util.StringUtil;
 
-StringUtil.null2string(map.get("USER_CODE"));
-StringUtil.null2string(map.get("USER_NAME"));
+String userCode = StringUtil.null2string(map.get("USER_CODE"));
+String userName = StringUtil.null2string(map.get("USER_NAME"));
 ```
 
 * static import 를 사용하면 코드가 훨씬 깔끔해진다.
@@ -13,8 +13,8 @@ StringUtil.null2string(map.get("USER_NAME"));
 import static com.util.StringUtil.null2string;
 //또는 import static com.util.StringUtil.*;
 
-null2string(map.get("USER_CODE"));
-null2string(map.get("USER_NAME"));
+String userCode = null2string(map.get("USER_CODE"));
+String userName = null2string(map.get("USER_NAME"));
 ```
   * <code>StringUtil.</code>을 쓰지 않아도 <code>null2string</code> 사용할 수 있다.
 

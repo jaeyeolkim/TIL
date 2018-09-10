@@ -22,5 +22,6 @@ user.setDeptName(null2string(map.get("DEPT_NAME")));
 
 * import static com.util.StringUtil.<code>*</code>; 
   * 상황에 따라 다르겠지만 메소드의 출처를 알기 어려울 수도 있어서 협업시에는 좋지 않을 듯 하다.
+  * 실제 사용해보니 위와 같이 사용하는 것이 더 깔끔하고 메소드에 마우스오버시 클래스도 표기되니 문제 없을 듯 하다.
 * java 1.5 부터 사용 가능하다.
   * https://docs.oracle.com/javase/1.5.0/docs/guide/language/static-import.html
